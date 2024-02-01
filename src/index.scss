@@ -1,0 +1,468 @@
+/* Le code ci-dessous correspond à la version responsive uniquement */
+
+/****** Media queries ***********/
+/* Medium devices (tablets, less/equal than 1172px) */
+@media (max-width: 1172px) {
+
+    header a img {
+        margin-left: 0;
+    }
+
+    header .lien-activités {
+        margin-right: 0;
+    }
+    
+    .recherches-filtres-info {
+        margin-left: 0;
+        margin-top: 50px;
+    }
+
+    h1 + p {
+        margin-bottom: 35px;
+    }
+
+    .location i {
+    padding: 27px 20px 26.5px 20px;
+    }
+
+    .filtres {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .filtres .bouton-filtres .filters-buttons {
+        margin: 0 15px 0 0;
+        font-size: 1em;
+    }
+
+    .info {
+        margin-top: 0;
+        margin-bottom: 30px;
+    }
+    
+    .info button {
+        margin-right: 10px;
+        margin-left: 0;
+    }
+
+    .hebergements-et-populaires {
+        flex-direction: column-reverse;
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    .hebergements {
+        width: 100%;
+    }
+
+    .populaires {
+        width: 100%;
+        margin: 50px 0;
+    }
+
+    .populaires-card {
+        width: 30%;
+    }
+
+    .populaires-cartes {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .populaires-cartes .carte {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .populaires-cartes .carte-titre {
+        font-size: 14px;
+    }
+
+    .populaires-cartes .carte-sous-titre {
+        font-size: 13px;
+    }
+
+    /* padding des 'contenu-carte' pour hebergements et populaires */
+
+    .cartes-hebergements .contenu-carte {
+        padding-left: 5px;
+    }
+
+    .populaires-cartes .contenu-carte {
+        padding-left: 5px;
+    }
+
+    .activités {
+        box-sizing: border-box;
+    }
+
+    .activités h2 {
+        margin-top: 50px;
+        margin-bottom: 30px;
+    }
+
+    .activités-cartes img {
+        height: 200px;
+    }
+
+    .activités-cartes {
+        width: 100%;
+    }
+
+    .activités-cartes .carte-titre {
+        margin-top: 15px;
+    }
+
+    .activités-cartes .contenu-carte {
+        height: 73.4px;
+        justify-content: center;
+    }
+
+}
+
+/* Small devices (phones, less than 776px) */
+@media (max-width: 776px) {
+
+    .conteneur-principal {
+        padding: 0;
+    }
+    /* ... */
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 0;
+    }
+
+    .logo-booki {
+        display: none;
+    }
+
+    .logo-mobile {
+        display: block;
+        margin: 30px;
+        height: 19px;
+        width: 61.09px;
+    }
+
+    nav {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        padding-left: 0;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    nav ul li {
+        box-sizing: border-box;
+        padding-top: 0;
+        font-size: 1rem;
+        width: 50%;  
+        text-align: center;  
+        border-bottom: 3px solid var(--main-bg-color);
+        margin-right: 0;
+        padding-bottom: 16px;
+    }
+
+    nav ul li:hover {
+        border-bottom: 3px solid var(--main-color);
+        padding-bottom: 16px;
+        border-top: none;
+    }
+
+    .lien-hébergements {
+        margin-right: 0;
+    }
+    .lien-hébergements:hover {
+        border-top: none;
+    }
+    
+    .lien-activités:hover {
+        border-top: none;
+    }
+
+    .recherches-filtres-info {
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-top: 30px;
+        box-sizing: border-box;
+    }
+
+    .recherches-filtres-info h1 {
+        font-size: 1.3rem;
+        margin: 0;
+    }
+
+    h1 + p {
+        font-size: 1rem;
+        margin: 8px 0 35px 0;
+    }
+    
+    .recherches {
+        box-sizing: border-box;
+        justify-content: center;
+    }
+
+    .location i {
+    padding: 27px 20px 27px 20px;
+    }
+
+    .barre {
+        flex: 1;
+    }
+
+    .barre input {
+        border-style: solid;
+        border-color: var(--main-bg-color);
+        border-right: none;
+        font-weight: bold;
+        text-align: start;
+        width: 92%;
+    }
+
+    .bouton-et-loupe {
+        height: 55px;
+        width: 55px;
+        margin-left: -30px;
+    }
+
+    .bouton-et-loupe button {
+        display: none;
+    }
+
+    .bouton-et-loupe .search-icon {
+        color: white;
+        display: block;
+        cursor: pointer;
+        background-color: var(--main-color);
+        border-radius: 17px;
+        padding: 20px;
+        font-size: 1rem;
+    }
+
+    .filtres {
+        align-items: center;
+        background-color: var(--main-bg-color);
+        padding-bottom: 20px;
+        border-radius: 10px;
+    }
+
+    .filtres h3 {
+        font-size: 1.1rem;
+    }
+
+    .bouton-filtres {
+        width: 100%;
+        flex-wrap: wrap;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .bouton-filtres .filters-icons {
+        padding-right: 10px;
+        font-size: 0.9rem;
+    }
+
+    .bouton-filtres button .filters-icons {
+        margin-right: 0;
+    }
+    
+    .filtres .bouton-filtres .filters-buttons {
+        box-sizing: border-box;
+        margin-bottom: 20px;
+        width: 200px;
+        border-width: 3px;
+        margin: 0;
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+        border-color: rgb(192, 192, 192);
+    }
+
+    #familial {
+        padding-left: 20px;
+    }
+
+    .info {
+        align-content: center; 
+        margin-bottom: 0;
+    }
+
+    .info p {
+        font-size: 0.9rem;
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+    
+    .info button {
+        margin-right: 10px;
+    }
+
+    .info button i {
+        font-size: 0.75rem;
+        align-content: center;
+        margin: 5px;
+    }
+
+    .hebergements-et-populaires { 
+        flex-direction: column-reverse;
+    }
+
+    .hebergements-et-populaires section {
+        padding: 30px 20px 30px 20px;
+    }
+
+    .cartes-hebergements .hebergements-card {
+        width: 100%;
+    }
+
+    .populaires {
+        margin-top: 35px;
+    }
+
+    .populaires-card {
+        width: 100%;
+    }
+
+    .populaires h2 {
+        font-size: 1.4rem;
+    }
+
+    .populaires h2 + i {
+        font-size: 1.1rem;
+    }
+
+    .populaires-cartes {
+        flex-direction: column;
+    }
+
+    .populaires-cartes a {
+        width: 100%;
+    }
+
+    .populaires-cartes .carte {
+        width: 100%;
+    }
+
+    #carte-padding .carte-titre {
+        width: 90%;
+    }
+
+    .populaires-cartes .carte img {
+        height: 140px;
+    }
+    
+    .populaires-cartes .carte-titre {
+        font-size: 1rem;
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    .populaires-cartes .carte-sous-titre {
+        font-size: 0.9rem;
+    }
+
+    .populaires-cartes .note-carte {
+        font-size: 1rem;
+    }
+
+    .hebergements h2 {
+        font-size: 1.4rem;
+    }
+
+    .cartes-hebergements {
+        flex-direction: column;
+    }
+
+    .cartes-hebergements a {
+        width: 100%;
+    }
+
+    .cartes-hebergements .carte {
+        width:100%;
+    }
+
+    .cartes-hebergements img {
+        height: 120px;
+    }
+
+    .cartes-hebergements .carte-titre {
+        font-size: 1rem;
+        margin-bottom: 4px;
+    }
+
+    .cartes-hebergements .carte-sous-titre {
+        font-size: 0.9rem;
+        margin-bottom: 8px;
+    }
+
+    .cartes-hebergements .note-carte {
+        font-size: 1rem;
+    }
+
+    .cartes-hebergements+p {
+        font-size: 1rem;
+    }
+
+    .activités {
+        margin-bottom: 35px;
+    }
+
+    .activités h2 {
+        font-size: 1.4rem;
+        margin-top: 20px;
+    }
+
+    .activités-cartes {
+        flex-direction: column;    
+    }
+
+    .activités-cartes .activity-card {
+        width: 100%;
+    }
+
+    .activités-cartes a {
+        width: 100%;
+    }
+
+    .activités-cartes .activités-carte {
+        width: 100%;
+    }
+
+    .activités-carte img {
+        height: 141px;
+    }
+
+    .activités-carte .contenu-carte {
+        height: 59px;
+    }
+
+    .activités-carte .carte-titre {
+        margin: 20px 19px 20px 4px;
+        font-size: 1.1rem;
+    }
+
+    .footer-div {
+        flex-direction: column;
+        padding: 30px 30px 20px 30px;
+        gap: 40px;
+    }
+
+    footer ul {
+        margin: 0;
+        padding: 0;
+    }
+
+    footer ul b {
+        font-size: 1.1rem;
+    }
+}

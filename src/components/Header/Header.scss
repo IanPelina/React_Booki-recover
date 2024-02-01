@@ -1,0 +1,48 @@
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.logo-mobile {
+    display: none;
+}
+
+header a img {
+    margin: 10px 30px 30px -20px;
+    width: 61.09px;
+    height: 19px;
+}
+
+nav ul {
+    margin: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    padding-top: 15px;
+}
+
+.lien-hébergements {
+    text-decoration: none;
+    color: white;
+    margin-right: 40px;
+}
+
+.lien-hébergements:hover {
+    color: var(--main-color);
+    padding-top: 16px;
+    border-top: 2px solid var(--main-color);
+}
+
+.lien-activités {
+    color: white;
+    text-decoration: none;
+    margin-right: -20px;
+}
+
+.lien-activités:hover {
+    padding-top: 16px;
+    border-top: 2px solid var(--main-color);
+    color: var(--main-color);
+}

@@ -1,0 +1,53 @@
+.populaires {
+    width: 32%;
+}
+
+.populaires h2 {
+    font-size: 1.4rem;
+    color: white;
+}
+
+.populaires-cartes .populaires-card {
+    margin: 0;
+    text-decoration: none;
+}
+
+.populaires-cartes .carte {
+    display: flex;
+    margin-top: 33px;
+    color: white;
+    cursor: pointer;
+    &:hover {
+        background-color: var(--filter-bg-color);
+    }
+}
+
+.populaires-cartes img {
+    width: 33%;
+    height: 136px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    padding-top: 0;
+}
+
+.populaires-cartes .contenu-carte {
+    width: 67%;
+    padding-left: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.populaires-cartes .carte-titre {
+    margin-top: 10px;
+    margin-bottom: 4px;
+}
+
+.populaires-cartes .carte-sous-titre {
+    margin: 0;
+}
+
+.populaires-cartes .note-carte {
+    margin-bottom: 5px;
+}

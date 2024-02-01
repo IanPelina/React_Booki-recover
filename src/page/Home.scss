@@ -1,0 +1,67 @@
+* {
+    font-family: 'Raleway', sans-serif;
+}
+
+:root {
+    --main-color: #00b38b;
+    --main-bg-color: rgb(34, 34, 34);
+    --filter-bg-color: rgb(53, 53, 53);
+}
+
+.populaires-icon {
+    color: var(--main-color);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    background-color:#292929;
+}
+
+.conteneur-principal {
+    width: 100%;
+    max-width: 1440px;
+    min-width: 320px;
+    box-sizing: border-box;
+    padding: 0 50px;
+}
+
+.recherches-filtres-info h1 {
+    margin-bottom: 0;
+    color: white;
+}
+
+h1 + p {
+    font-size: 1.1em;
+    margin-top: 5px;
+    margin-bottom: 30px;
+    color: rgb(187, 187, 187);
+}
+
+.hebergements-et-populaires {
+    display: flex;
+    justify-content: space-between;
+}
+
+.hebergements-et-populaires section {
+    background-color: var(--main-bg-color);
+    border-radius: 20px;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+.titre {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.titre-section {
+    margin: 0;
+    font-size: 22px;
+}
+
+.star {
+    color: var(--main-color);
+    margin: 0 2px 0 0;
+}
