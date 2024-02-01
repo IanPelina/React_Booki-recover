@@ -3,12 +3,12 @@ import { faStar } from '@fortawesome/free-solid-svg-icons';
 
 import './Hebergement.scss';
 
-export default function Hebergement({hebergement, display, setDisplay}) {
+export default function Hebergement({hebergement}) {
 
     return (
         <>
             {hebergement && (
-                <div className='hebergements-card' onClick={ () => {setDisplay(!display)}}>
+                <div className='hebergements-card'>
                     <article className='carte'>
                         <img src={hebergement.cover} alt={hebergement.alt} />
                         <div className="contenu-carte">

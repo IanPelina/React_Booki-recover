@@ -7,7 +7,6 @@ import Hebergement from '../components/Hebergement/Hebergement';
 import Populaire from '../components/Populaire/Populaire';
 import Activities from '../components/Activities/Activities';
 import Footer from '../components/Footer/Footer';
-import DisplayCard from '../components/DisplayedCard/DisplayCard';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChartLine } from '@fortawesome/free-solid-svg-icons';
@@ -22,22 +21,18 @@ export default function Home() {
     const [accomodations, setAccomodations] = useState([]);
     const [populars, setPopulars] = useState([]);
     const [activities, setActivities] = useState([]);
-    const [display, setDisplay] = useState(false);
 
     // On effectue une requête GET pour récupérer les données
     useEffect(() => {
-        console.log("Before accomodations request");
     axios.get('http://localhost:3001/api/accommodations', { withCredentials: true })
       .then(response => {
         setAccomodations(response.data.accomodations);
-        console.log(response.data.accomodations);
       })
       // Ici accomodations correspondra au body de la réponse renvoyé, à savoir un tableau des hebergements
       .catch(error => {
         console.error('Erreur lors de la récupération des données:', error);
       });
-      console.log("After accomodations request");
-        }, []);
+    }, []);
 
     useEffect(() => {
     axios.get('http://localhost:3001/api/populars', { withCredentials: true })
@@ -72,22 +67,15 @@ export default function Home() {
                     </section>
                     <div className="hebergements-et-populaires">
                         <section className="hebergements" id="hebergements">
-                            {
-                            !display &&
-                                <>
-                                    <div className="titre">
-                                        <h2 className="titre-section">Hébergements à Marseille</h2>
-                                    </div>
-                                    <div className="cartes-hebergements">
-                                    {accomodations.map(hebergement => <Hebergement key={hebergement.title} hebergement={hebergement} display={display} setDisplay={setDisplay} /> )}
-                                    </div>
-                                    <p><b>Afficher plus</b></p>
-                                </>
-                            || 
-                                <div className='displayed-container'>
-                                    {accomodations.map(hebergement => <DisplayCard key={hebergement.title} hebergement={hebergement}/> )}
+                            <>
+                                <div className="titre">
+                                    <h2 className="titre-section">Hébergements à Marseille</h2>
                                 </div>
-                            }
+                                <div className="cartes-hebergements">
+                                {accomodations.map(hebergement => <Hebergement key={hebergement.title} hebergement={hebergement}/> )}
+                                </div>
+                                <p><b>Afficher plus</b></p>
+                            </>
                         </section>
                         <section className="populaires">
                             <div className="titre">
